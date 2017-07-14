@@ -11,7 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 PRODUCT_BUILD_RECOVERY_IMAGE := true
 
 # USB
-PRODUCT_PROPERTY_OVERRIDES += sys.usb.configfs=0
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.configfs=0 \
+    sys.usb.ffs.aio_compat=1
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
