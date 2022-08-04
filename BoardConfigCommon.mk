@@ -55,6 +55,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGB_565
 # TWRP
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_ENABLE_BLKDISCARD := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_HAS_MTP := true
 #TW_INPUT_BLACKLIST := "accelerometer\x0ahbtp_vm"
