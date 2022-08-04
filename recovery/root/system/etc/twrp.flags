@@ -1,0 +1,32 @@
+# mount point   fstype  device                      device2                     flags
+
+# Boot
+/boot           emmc    /dev/block/bootdevice/by-name/boot
+/recovery       emmc    /dev/block/bootdevice/by-name/recovery                  flags=backup=1
+
+# Cache
+/cache          ext4    /dev/block/bootdevice/by-name/cache                     flags=fsflags="discard"
+
+# Data
+/data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=fsflags="discard"
+
+# Modem
+/modem          vfat    /dev/block/bootdevice/by-name/modem                     flags=display="Modem";backup=1
+/firmware       vfat    /dev/block/bootdevice/by-name/apnhlos                   flags=display="Firmware";backup=1
+
+# EFS
+/efs1           emmc    /dev/block/bootdevice/by-name/efs                       flags=display="EFS";backup=1
+/efs2           emmc    /dev/block/bootdevice/by-name/modemst1                  flags=backup=1;subpartitionof=/efs1
+/efs3           emmc    /dev/block/bootdevice/by-name/modemst2                  flags=backup=1;subpartitionof=/efs1
+
+# Persist
+/persist        ext4    /dev/block/bootdevice/by-name/persist                   flags=display="Persist";fsflags="ro"
+/persist_image  emmc    /dev/block/bootdevice/by-name/persist                   flags=display="Persist";backup=1;flashimg=1
+
+# Removable storage
+/sdcard1        auto    /dev/block/mmcblk1p1                                    flags=display="MicroSD";removable;storage;wipeingui
+/usb_otg        auto    /dev/block/sda1             /dev/block/sda              flags=display="USB OTG";removable;storage;wipeingui
+
+# System
+/system_root    ext4    /dev/block/bootdevice/by-name/system                    flags=display="System";fsflags="discard";wipeingui
+/system_image   emmc    /dev/block/bootdevice/by-name/system                    flags=display="System";backup=1;flashimg=1
