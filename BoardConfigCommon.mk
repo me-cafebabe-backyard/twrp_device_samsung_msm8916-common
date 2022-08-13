@@ -64,6 +64,7 @@ TW_MAX_BRIGHTNESS := 255
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_NO_REBOOT_BOOTLOADER := true
 TW_NO_USB_STORAGE := true
+TW_SCREEN_BLANK_ON_BOOT := true
 TW_THEME := portrait_hdpi
 
 TW_EXCLUDE_APEX := true
