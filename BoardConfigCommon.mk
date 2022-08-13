@@ -64,3 +64,8 @@ TW_MTP_DEVICE := /dev/mtp_usb
 TW_NO_REBOOT_BOOTLOADER := true
 TW_NO_USB_STORAGE := true
 TW_THEME := portrait_hdpi
+
+TW_EXCLUDE_APEX := true
+TW_EXCLUDE_BASH := true
+TW_EXCLUDE_NANO := true
+TW_EXCLUDE_PYTHON := true
