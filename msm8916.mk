@@ -7,9 +7,6 @@
 # Inherit AOSP product makefiles
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Partitions
-PRODUCT_BUILD_RECOVERY_IMAGE := true
-
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.configfs=0 \
