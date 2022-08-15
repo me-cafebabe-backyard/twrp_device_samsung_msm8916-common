@@ -7,6 +7,9 @@
 # Inherit AOSP product makefiles
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
+# Inherit OMNI product makefiles
+$(call inherit-product, vendor/omni/config/common.mk)
+
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.configfs=0 \
